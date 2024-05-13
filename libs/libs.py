@@ -67,7 +67,7 @@ def log_metrics(y_true, y_pred, output_folder="", label_names=["Background", "Si
     # Binarize the output
     y_test = label_binarize(y_true, classes=np.arange(len(label_names)))
     n_classes = y_test.shape[1]
-    plt.figure()
+    plt.figure(figsize=(10,10))
     fpr, tpr, _ = roc_curve(y_true[:], y_pred[:])
     roc_auc = auc(fpr, tpr)
     plt.plot(fpr, tpr, lw=2, label='ROC curve (area = {0:0.2f})'.format(roc_auc))

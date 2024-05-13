@@ -12,8 +12,8 @@ sys.path.append('models')
 import cnn_1d as model
 
 # set seed
-np.random.seed(0)
-tf.random.set_seed(0)
+np.random.seed(1)
+tf.random.set_seed(1)
 
 
 # load and read json file
@@ -83,12 +83,18 @@ model.save(os.path.join(output_folder, 'model.h5'))
 # do some plots
 plt.plot(history.history['loss'], label='loss')
 plt.plot(history.history['val_loss'], label='val_loss')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.title('Loss')
 plt.legend()
 plt.savefig(os.path.join(output_folder, 'loss.png'))
 plt.close()
 
 plt.plot(history.history['accuracy'], label='accuracy')
 plt.plot(history.history['val_accuracy'], label='val_accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.title('Accuracy')
 plt.legend()
 plt.savefig(os.path.join(output_folder, 'accuracy.png'))
 plt.close()
