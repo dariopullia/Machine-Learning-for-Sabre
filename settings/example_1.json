@@ -1,0 +1,5 @@
+{
+    "signal_dataset_folder": "/afs/cern.ch/work/d/dapullia/private/sabre/data/segnale/NaI33_PostPoP_Wf",
+    "background_dataset_folder": "/afs/cern.ch/work/d/dapullia/private/sabre/data/rumore/NaI33_PostPoP_Wf",
+    "output_folder": "/afs/cern.ch/work/d/dapullia/private/sabre/output/"
+}
